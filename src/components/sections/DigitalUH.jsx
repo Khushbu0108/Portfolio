@@ -63,7 +63,7 @@ function RealScreenshot({ src, alt, note, objectPosition = "top" }) {
 function OldHome() {
   return (
     <RealScreenshot
-      src="../../../public/images/screens/old_home.png"
+      src="../../../public/images/screens/old_home.PNG"
       alt="UHGo Home screen"
       note="✗ Everything surfaces equally. Grade shortcuts dominate. No daily context or prioritization."
     />
@@ -73,7 +73,7 @@ function OldHome() {
 function OldMap() {
   return (
     <RealScreenshot
-      src="../../../public/images/screens/old_map.png"
+      src="../../../public/images/screens/old_map.PNG"
       alt="UHGo Map screen"
       note="✗ Search returns room numbers (PGH 200) not buildings. Abbreviation-only queries fail silently."
       objectPosition="top"
@@ -84,7 +84,7 @@ function OldMap() {
 function OldDining() {
   return (
     <RealScreenshot
-      src="../../../public/images/screens/old_dining.png"
+      src="../../../public/images/screens/old_dining.PNG"
       alt="UHGo Dining screen"
       note="✗ Menus exist but only per-location after multiple taps. No occupancy, no smart recommendations."
     />
@@ -94,7 +94,7 @@ function OldDining() {
 function OldShuttle() {
   return (
     <RealScreenshot
-      src="../../../public/images/screens/old_shuttle.png"
+      src="../../../public/images/screens/old_shuttle.PNG"
       alt="UHGo Live Vehicle Tracking"
       note="✗ Dots clustered on a generic map. No arrival times, no stop names, no route context."
     />
