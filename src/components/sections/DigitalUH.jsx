@@ -136,7 +136,7 @@ function OldShuttle() {
 function OldEmergency() {
   return (
     <RealScreenshot
-      src="/images/screens/old_emergency.png"
+      src="/images/screens/old_emergency.PNG"
       alt="UHGo UH Police screen"
       note="✗ Only UH Police is surfaced here. CAPS, Health Center, Facilities, and Intl. Student Services require separate navigation."
     />
@@ -146,7 +146,7 @@ function OldEmergency() {
 function OldOrgs() {
   return (
     <RealScreenshot
-      src="/images/screens/old_orgs.png"
+      src="/images/screens/old_orgs.PNG"
       alt="UHGo Organizations screen"
       note="✗ 108 organizations listed alphabetically with no relevance to major, interest, or activity level."
     />
@@ -156,7 +156,7 @@ function OldOrgs() {
 function OldProfile() {
   return (
     <RealScreenshot
-      src="/images/screens/old_profile.png"
+      src="/images/screens/old_profile.PNG"
       alt="UHGo My Profile screen"
       note="✗ Name and email only. No dining balance, no advisor, no ID — nothing actionable."
     />
