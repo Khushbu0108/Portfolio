@@ -63,7 +63,7 @@ function RealScreenshot({ src, alt, note, objectPosition = "top" }) {
 function OldHome() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_home.PNG"
+      src="/images/screens/old_home.PNG"
       alt="UHGo Home screen"
       note="✗ Everything surfaces equally. Grade shortcuts dominate. No daily context or prioritization."
     />
@@ -73,7 +73,7 @@ function OldHome() {
 function OldMap() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_map.PNG"
+      src="/images/screens/old_map.PNG"
       alt="UHGo Map screen"
       note="✗ Search returns room numbers (PGH 200) not buildings. Abbreviation-only queries fail silently."
       objectPosition="top"
@@ -84,7 +84,7 @@ function OldMap() {
 function OldDining() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_dining.PNG"
+      src="/images/screens/old_dining.PNG"
       alt="UHGo Dining screen"
       note="✗ Menus exist but only per-location after multiple taps. No occupancy, no smart recommendations."
     />
@@ -94,7 +94,7 @@ function OldDining() {
 function OldShuttle() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_shuttle.PNG"
+      src="/images/screens/old_shuttle.PNG"
       alt="UHGo Live Vehicle Tracking"
       note="✗ Dots clustered on a generic map. No arrival times, no stop names, no route context."
     />
@@ -136,7 +136,7 @@ function OldShuttle() {
 function OldEmergency() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_emergency.png"
+      src="/images/screens/old_emergency.png"
       alt="UHGo UH Police screen"
       note="✗ Only UH Police is surfaced here. CAPS, Health Center, Facilities, and Intl. Student Services require separate navigation."
     />
@@ -146,7 +146,7 @@ function OldEmergency() {
 function OldOrgs() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_orgs.png"
+      src="/images/screens/old_orgs.png"
       alt="UHGo Organizations screen"
       note="✗ 108 organizations listed alphabetically with no relevance to major, interest, or activity level."
     />
@@ -156,7 +156,7 @@ function OldOrgs() {
 function OldProfile() {
   return (
     <RealScreenshot
-      src="/public/images/screens/old_profile.png"
+      src="/images/screens/old_profile.png"
       alt="UHGo My Profile screen"
       note="✗ Name and email only. No dining balance, no advisor, no ID — nothing actionable."
     />
