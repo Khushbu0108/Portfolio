@@ -561,19 +561,19 @@ const INK  = "#0E0D0B";
  * ─────────────────────────────────────────────── */
 const IMAGES = {
   painting: {
-    feature: "/public/images/screens/painting_1.PNG",
-    a: "/public/images/screens/painting_2.PNG",
-    b: "/public/images/screens/painting_3.PNG",
+    feature: "/images/screens/painting_1.PNG",
+    a: "/images/screens/painting_2.PNG",
+    b: "/images/screens/painting_3.PNG",
   },
   ceramics: {
-    a: "/public/images/screens/ceramic_1.jpg",
-    b: "/public/images/screens/ceramic_2.jpg",
-    c: "/public/images/screens/ceramic_3.jpg",
+    a: "/images/screens/ceramic_1.jpg",
+    b: "/images/screens/ceramic_2.jpg",
+    c: "/images/screens/ceramic_3.jpg",
   },
   photography: {
-    a: "/public/images/screens/sfo.PNG",
-    b: "/public/images/screens/sunset.jpg",
-    c: "/public/images/screens/maine.jpeg",
+    a: "/images/screens/sfo.PNG",
+    b: "/images/screens/sunset.jpg",
+    c: "/images/screens/maine.jpeg",
   },
 };
 
@@ -696,9 +696,7 @@ function AtmosphereCanvas() {
   );
 }
 
-/* ─────────────────────────────────────────────── *
- *  Placeholder image frame                        *
- * ─────────────────────────────────────────────── */
+
 function ImageFrame({ src, alt = "", label = "", aspect = "4/5", className = "", delay = 0, onOpen }) {
   const [hovered, setHovered] = useState(false);
   const [loaded, setLoaded]   = useState(false);
