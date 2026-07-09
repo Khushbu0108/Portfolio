@@ -1,3 +1,5 @@
+
+
 // import { useRef } from "react";
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { Eyebrow, GlassCard } from "../Primitives";
@@ -564,35 +566,98 @@
 //           ))}
 //         </div>
 
-//         {/* Drink builder full-width placeholder */}
-//         <div className="mt-6 overflow-hidden rounded-2xl border border-white/8 bg-white/[0.02]">
-//           <div
-//             className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#3B1F0A]/40 via-ink-900 to-ink-900"
-//             style={{ height: "38vh" }}
+//         {/* ── Interactive Drink Builder — product showcase ── */}
+//         <div className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-5 lg:gap-12">
+//           {/* Video — left column (~60%) */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 28 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true, margin: "-8%" }}
+//             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+//             whileHover={{ y: -6 }}
+//             data-cursor="hover"
+//             className="relative lg:col-span-3"
 //           >
-//             <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(200,169,106,0.06)_1px,transparent_0)] [background-size:24px_24px]" />
-//             <div className="pointer-events-none absolute left-1/3 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-gold/8 blur-[80px]" />
-//             <video
-//               autoPlay
-//               loop
-//               muted
-//               playsInline
-//               preload="metadata"
-//               controls={false}
-//               className="relative h-full w-full object-contain rounded-2xl"
+//             {/* soft floating glow behind the video (painted first, sits behind) */}
+//             <div className="pointer-events-none absolute -inset-6 rounded-[2.25rem] bg-gold/10 blur-[90px]" />
+
+//             {/* gentle floating wrapper */}
+//             <motion.div
+//               animate={{ y: [0, -9, 0] }}
+//               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+//               className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/50 transition-colors duration-500 hover:border-gold/30"
 //             >
-//               <source src="/videos/drink-builder.mov" type="video/quicktime" />
-//             </video>
-//           </div>
-//           <div className="border-t border-white/8 p-6">
-//             <div className="font-display text-lg text-bone">Interactive Drink Builder</div>
-//             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-bone/40">
-//               Designed an interactive customization experience that lets customers personalize their drinks by selecting the base, 
-//               milk, sweetness, ice level, and toppings. The interface updates in real time to create a smooth, 
-//               engaging ordering experience while keeping the workflow simple and intuitive.
-  
+//               <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-gradient-to-br from-[#3B1F0A]/40 via-ink-900 to-ink-900 sm:aspect-[5/4]">
+//                 <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(200,169,106,0.06)_1px,transparent_0)] [background-size:24px_24px]" />
+//                 <div className="pointer-events-none absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/10 blur-[80px]" />
+//                 <video
+//                   autoPlay
+//                   loop
+//                   muted
+//                   playsInline
+//                   preload="metadata"
+//                   controls={false}
+//                   className="relative h-full w-full object-contain"
+//                 >
+//                   <source src="/videos/drink-builder.mp4" type="video/mp4"  />
+//                 </video>
+
+//                 {/* Live Demo badge */}
+//                 <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-md">
+//                   <span className="relative flex h-2 w-2">
+//                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
+//                     <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+//                   </span>
+//                   <span className="font-mono text-[10px] uppercase tracking-eyebrow text-bone/80">Live Demo</span>
+//                 </div>
+//               </div>
+//             </motion.div>
+//           </motion.div>
+
+//           {/* Copy + features — right column (~40%) */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 28 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true, margin: "-8%" }}
+//             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+//             className="lg:col-span-2"
+//           >
+//             <div className="font-mono text-[10px] uppercase tracking-eyebrow text-gold/60">The centerpiece</div>
+//             <h4 className="mt-4 font-display text-2xl leading-tight tracking-tight text-bone md:text-3xl">
+//               Interactive Drink Builder
+//             </h4>
+//             <p className="mt-4 text-sm leading-relaxed text-bone/45">
+//               A live customization experience where customers personalize base, milk, sweetness, ice, and toppings
+//               with the cup updating in real time for a smooth, confident ordering flow.
 //             </p>
-//           </div>
+
+//             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+//               {[
+//                 ["Live Cup Preview", "Updates instantly as ingredients change."],
+//                 ["Smart Customization", "Personalize size, milk, sweetness, ice, and toppings."],
+//                 ["Smooth Ordering Flow", "Progressive interactions reduce decision fatigue."],
+//                 ["Mobile First", "Designed for quick ordering on any device."],
+//               ].map(([title, desc], i) => (
+//                 <motion.div
+//                   key={title}
+//                   initial={{ opacity: 0, y: 16 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   viewport={{ once: true, margin: "-8%" }}
+//                   transition={{ duration: 0.5, delay: 0.15 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
+//                   data-cursor="hover"
+//                   className="group rounded-xl border border-white/8 bg-white/[0.02] p-4 transition-all duration-500 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/[0.05]"
+//                 >
+//                   <div className="flex items-start gap-3">
+//                     <span className="mt-0.5 font-mono text-xs text-gold/70 transition-colors duration-500 group-hover:text-gold">✓</span>
+//                     <div>
+//                       <div className="font-display text-sm text-bone">{title}</div>
+//                       <p className="mt-1 text-xs leading-relaxed text-bone/40">{desc}</p>
+//                     </div>
+//                   </div>
+//                 </motion.div>
+//               ))}
+//             </div>
+//           </motion.div>
 //         </div>
 //       </div>
 
@@ -822,6 +887,9 @@
 
 
 
+
+
+
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Eyebrow, GlassCard } from "../Primitives";
@@ -836,15 +904,15 @@ const META = [
 
 const PROBLEMS = [
   ["No Digital Presence", "The shop had no website, no ordering platform, and no way for customers to explore the menu before arriving."],
-  ["Manual Ordering Only", "Every order was placed in person or by phone such asno customization, no order history, no pickup queue."],
+  ["Manual Ordering Only", "Every order was placed in person or by phone like no customization, no order history, no pickup queue."],
   ["No Drink Customization", "Customers couldn't build drinks online. Specialty modifications were communicated verbally, creating frequent errors."],
   ["No Pickup Workflow", "Staff had no visibility into incoming orders. There was no queue, no status tracking, no digital handoff."],
-  ["Weak Digital Branding", "The brand had no visual identity online like no cohesive typography, color system, or digital presence to build on."],
+  ["Weak Digital Branding", "The brand had no cohesive digital identity like no online typography, color system, or visual presence to build on."],
 ];
 
 const GOALS = [
   ["Premium Digital Presence", "Build a web platform that reflects the shop's craft and quality, not a generic ordering widget."],
-  ["Interactive Drink Builder", "Let customers configure every element of their drink such as base, milk, sweetness, ice, toppings before checkout."],
+  ["Interactive Drink Builder", "Let customers configure every element of their drink: base, milk, sweetness, ice, toppings before checkout."],
   ["Streamlined Pickup Flow", "Give customers order confirmation and status; give staff a live dashboard to manage the queue."],
   ["Modern Customer Experience", "Make browsing the menu, building a drink, and placing an order feel like using a product from a specialty brand."],
 ];
@@ -854,7 +922,7 @@ const ROLES = [
   ["UX Research", "Studied specialty coffee and boba ordering experiences in-store, mobile, and web to identify conventions and opportunities."],
   ["UI Design", "Built a warm, premium visual system: typography, color, spacing, and component patterns grounded in the shop's identity."],
   ["Frontend Engineering", "Implemented the full application in React with TypeScript, managing complex state across the drink builder, cart, and dashboards."],
-  ["Component Architecture", "Designed a reusable component library such as menus, configurators, cards, dashboards built to scale with new categories and features."],
+  ["Component Architecture", "Designed a reusable component library such as menus, configurators, cards, dashboards where built to scale with new categories and features."],
   ["Motion Design", "Used Framer Motion for physics-based animations in the drink builder and page transitions that feel deliberate, not decorative."],
 ];
 
@@ -862,14 +930,14 @@ const FEATURES = [
   ["Drink Builder", "A physics-based interactive configurator with live interactive glass rendering, category-aware liquid fill animations, and boba/ice particle effects."],
   ["Full Menu System", "75+ drinks across 8 categories, each with size, milk, sweetness, ice, and topping variants, structured with TypeScript interfaces."],
   ["Cart & Checkout", "Persistent cart with modifier summary, pricing breakdown, and order submission flow with confirmation state."],
-  ["Staff Dashboard", "Live order queue with status management like pending, in progress, ready giving staff clear visibility into every order."],
-  ["Owner Analytics", "Sales trends, top items, hourly volume, and revenue charts built with Recharts and LocalStorage order history."],
-  ["Mobile Responsive", "Every screen like configurator, menu, cart, dashboards adapts to phone, tablet, and desktop without layout compromise."],
+  ["Staff Dashboard", "Live order queue with status management like pending, in progress, ready which giving staff clear visibility into every order."],
+  ["Owner Analytics", "Sales trends, top items, hourly volume, and revenue charts built with Recharts on sample order history (LocalStorage)."],
+  ["Mobile Responsive", "Every screen configurator, menu, cart, dashboards which adapts to phone, tablet, and desktop without layout compromise."],
 ];
 
 const ARCH = [
   ["Frontend", "React · TypeScript · Vite", "Component-driven architecture with strict TypeScript interfaces for drinks, orders, cart items, and modifier options."],
-  ["Styling", "Tailwind CSS · Custom Tokens", "A warm design system such as cream, brown, gold expressed as Tailwind config tokens for consistent theming across all surfaces."],
+  ["Styling", "Tailwind CSS · Custom Tokens", "A warm design system - cream, brown, gold expressed as Tailwind config tokens for consistent theming across all surfaces."],
   ["Animation",
   "Framer Motion",
   "Crafted smooth page transitions, scroll-based interactions, hover effects, and micro-interactions using Framer Motion to create a polished and engaging user experience."],
@@ -942,7 +1010,7 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
           </motion.h2>
           <p className="max-w-sm text-bone/55">
             A specialty coffee and boba shop with loyal customers and no digital surface to
-            match. Fusion 36° is the product I designed and engineered to close that gap —
+            match. Fusion 36° is the product I designed and engineered to close that gap 
             a single ordering system, built mobile-first and refined for desktop, where
             browsing, customizing, and checking out feel like one continuous experience
             instead of three different ones.
@@ -1012,7 +1080,7 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
           A great product with no digital surface to show for it.
         </h3>
         <p className="mt-5 max-w-xl text-bone/50">
-          Fusion 36 Degree had loyal customers and quality drinks but no way to reach people
+          Fusion 36° had loyal customers and quality drinks but no way to reach people
           online, take orders digitally, or give staff any operational visibility.
         </p>
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -1096,7 +1164,8 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
         <p className="mt-5 max-w-xl text-bone/50">
           Before designing a single screen, I studied how specialty coffee brands, luxury product
           configurators, and mobile ordering systems structure the experience between browsing,
-          personalizing, and placing an order.
+          personalizing, and placing an order. The personas and insights below are working hypotheses drawn from that study and my own observation.
+           A starting point I’d validate with user interviews, not finished research.
         </p>
         <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-5">
           {["Product Configurators", "Specialty Coffee Brands", "Luxury Product Experiences", "Mobile Ordering Apps", "Modern UX Systems"].map((item, i) => (
@@ -1269,7 +1338,7 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
         {/* ── 4 · Key UX Insights ── */}
         <div className="mt-20">
           <div className="flex items-baseline gap-4">
-            <div className="font-mono text-[10px] uppercase tracking-eyebrow text-gold/60">04 · What the research surfaced</div>
+            <div className="font-mono text-[10px] uppercase tracking-eyebrow text-gold/60">04 · What the research pointed to</div>
             <div className="h-px flex-1 bg-white/8" />
           </div>
           <h4 className="mt-5 font-display text-2xl tracking-tight text-bone md:text-3xl">Key UX Insights</h4>
@@ -1332,7 +1401,7 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
       <div className="mx-auto max-w-7xl px-6 pb-28 md:px-10 md:pb-40" ref={cardRef}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {[
-            ["Customer · Ordering Flow", "Menu browsing, drink builder, cart and checkout — the full customer journey.", "Order Flow Screenshot"],
+            ["Customer · Ordering Flow", "Menu browsing, drink builder, cart and checkout - the full customer journey.", "Order Flow Screenshot"],
             ["Staff · Queue Dashboard", "Live incoming orders, status updates, and queue management for shop staff.", "Staff Dashboard Screenshot"],
             ["Owner · Analytics", "Sales trends, top items, and revenue charts built for the business owner.", "Owner Analytics Screenshot"],
           ].map(([label, desc, placeholder], i) => (
@@ -1671,8 +1740,8 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
           transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-bone/45"
         >
-          Fusion 36 started as a UI exercise and became a systems design problem. Once I understood
-          that three different users: customer, staff, owner. All needed to act on the same
+          Fusion 36° started as a UI exercise and became a systems design problem. Once I understood
+          that three different users such as customer, staff, and owner. All needed to act on the same
           underlying data, every component decision became easier. It reinforced that product
           thinking and engineering aren't separate phases. They have to happen simultaneously, or
           the seams show up in the interface.
@@ -1680,7 +1749,7 @@ export default function Fusion36({ onBack, onPrev, onNext } = {}) {
         <div className="mt-16 h-px w-full bg-white/8" />
         <div className="mt-12 flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div className="font-mono text-[11px] uppercase tracking-eyebrow text-muted">
-            Fusion 36 Degree · 2025 — 2026
+            Fusion 36° · 2026
           </div>
           <div className="flex flex-wrap gap-3">
             {["React", "TypeScript", "Framer Motion", "Tailwind"].map((t) => (

@@ -1069,8 +1069,8 @@ export default function Creative() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 max-w-md text-lg leading-relaxed text-bone/50"
           >
-            Creativity doesn't stop when I close my laptop. The things I make by hand —
-            paintings, ceramics, photographs — are where I first learn to see proportion,
+            Creativity doesn't stop when I close my laptop. The things I make by hand are
+            paintings, ceramics, photographs where I first learn to see proportion,
             texture, and light. That practice shapes every interface I design.
           </motion.p>
         </div>
@@ -1101,7 +1101,7 @@ export default function Creative() {
         >
           <p className="max-w-sm text-sm leading-relaxed text-bone/40">
             Hand-craft and code share the same loop: make, observe, refine, repeat. That
-            cycle is how I approach every product — from wireframe to shipped feature.
+            cycle is how I approach every product from wireframe to shipped feature.
           </p>
           <div className="flex items-center gap-3">
             <span className="h-1.5 w-1.5 rounded-full bg-gold/60" />
