@@ -110,6 +110,7 @@
 
 
 
+
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Eyebrow } from "../Primitives";
@@ -143,6 +144,27 @@ const ITEMS = [
     org: "CodeCoogs Student Organization · University of Houston",
     desc: "Support the planning and execution of technical workshops, coding events, and networking sessions for Computer Science students. Collaborate with student leaders to coordinate club operations, improve member engagement, and maintain clear communication across the organization. Help foster an environment where students can build technical skills through peer learning, project discussions, and connections to career development resources.",
     tag: "Leadership",
+  },
+  {
+    when: "2026",
+    role: "UI/UX Design Intern",
+    org: "AboveStandards APS",
+    desc: "Translate product requirements and user needs into intuitive interfaces, user flows, and interactive prototypes in Figma. Design reusable UI components and consistent interaction patterns, evaluate user journeys to identify usability friction, and collaborate with cross-functional team members to support implementation.",
+    tag: "Internship",
+  },
+  {
+    when: "Sep 2026 — Present",
+    role: "AI Agent Engineer Extern",
+    org: "Wayfair",
+    desc: "Build AI-powered workflows for product discovery, moodboard generation, and consumer trend analysis. Develop automated dashboards that organize product and competitor insights into clear, actionable information, and refine AI-generated outputs to improve clarity and usability.",
+    tag: "Extern",
+  },
+  {
+    when: "Aug 2026 — Present",
+    role: "Undergraduate Researcher",
+    org: "IAPHS Population Health Consulting Project · University of Houston",
+    desc: "Analyze demographic, socioeconomic, and community-health data to identify population health disparities. Translate complex findings into clear visual insights and evidence-based recommendations for a population-health client, collaborating with a research team.",
+    tag: "Research",
   },
   {
     when: "2026",

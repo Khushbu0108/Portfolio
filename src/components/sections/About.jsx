@@ -55,13 +55,14 @@ export default function About() {
               transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 max-w-xl text-lg leading-relaxed text-bone/55"
             >
-              As a Computer Science student with a Population Health minor, I work at the
-              intersection of software engineering, human-centered design, and health
-              technology, building frontend systems and digital products that are as
-              considered in their architecture as they are in their experience. I'm drawn
-              to problems where clinical complexity meets everyday usability, and where
-              good engineering and intentional design together determine whether something
-              actually works for people.
+              Computer Science student at the University of Houston with a focus on UI/UX design, 
+              product design, and AI-powered user experiences. Experienced in translating product 
+              ideas into user flows, wireframes, and interface concepts, with a focus on usability,
+              accessibility, and clear visual communication. Developing AccessPath,
+               an accessibility-first navigation platform, while exploring AI-powered workflows 
+               and data-driven product experiences. Combines technical problem-solving with a 
+               user-centered design mindset to create intuitive, inclusive, and thoughtful digital products. 
+               Seeking Summer 2027 Product Design, UI/UX Design, or AI Product Design internship opportunities.
             </motion.p>
 
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
