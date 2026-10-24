@@ -41,7 +41,7 @@ export default function Contact() {
             ktalaviya573@gmail.com
           </MagneticButton>
           <MagneticButton
-            href="/public/resume/CS_Design.pdf"
+            href="/public/resume/ui:ux resume.pdf"
             variant="ghost"
             download
           >
