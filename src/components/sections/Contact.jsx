@@ -7,7 +7,7 @@ const SOCIALS = [
   ["LinkedIn", "https://www.linkedin.com/in/khushbutalaviya/"],
   ["GitHub", "https://github.com/Khushbu0108"],
   ["HandShake", "https://app.joinhandshake.com/profiles/xun679"], 
-  
+
   // ["Dribbble", "#"],
 ];
 
@@ -41,7 +41,7 @@ export default function Contact() {
             ktalaviya573@gmail.com
           </MagneticButton>
           <MagneticButton
-            href="/resume/ux_resume.pdf"
+            href="/public/resume/CS_Design.pdf"
             variant="ghost"
             download
           >
