@@ -6,6 +6,8 @@ const SOCIALS = [
   ["Email", "mailto:ktalaviya573@gmail.com"],
   ["LinkedIn", "https://www.linkedin.com/in/khushbutalaviya/"],
   ["GitHub", "https://github.com/Khushbu0108"],
+  ["HandShake", "https://app.joinhandshake.com/profiles/xun679"], 
+  
   // ["Dribbble", "#"],
 ];
 

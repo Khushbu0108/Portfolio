@@ -266,7 +266,7 @@ import Contact from "./components/sections/Contact";
 import Creative from "./components/sections/Interest";
 
 // Order projects are presented in for Prev/Next case-study navigation.
-const PROJECT_ORDER = ["digitaluh", "fusion36"];
+const PROJECT_ORDER = ["digitaluh", "fusion36", "AccessPath"];
 
 const PAGE_TRANSITION = {
   initial: { opacity: 0, scale: 0.985 },
