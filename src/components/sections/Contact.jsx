@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MagneticButton, RevealText } from "../Primitives";
-
+// import {resume} from "./../../../public/resume/ui:ux resume.pdf"
 const SOCIALS = [
   ["Email", "mailto:ktalaviya573@gmail.com"],
   ["LinkedIn", "https://www.linkedin.com/in/khushbutalaviya/"],
@@ -41,7 +41,7 @@ export default function Contact() {
             ktalaviya573@gmail.com
           </MagneticButton>
           <MagneticButton
-            href="/public/resume/ui:ux resume.pdf"
+            href="/resume/ui:ux resume.pdf"
             variant="ghost"
             download
           >
